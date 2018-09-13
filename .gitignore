@@ -1,0 +1,23 @@
+.idea
+.DS_Store
+.vscode
+.env
+morgan.log
+
+# Built #
+/__build__/
+/__server_build__/
+/node_modules/
+/typings/
+/tsd_typings/
+/dist/
+/prod/
+/dist-server/
+/compiled/
+
+# Node #
+npm-debug.log
+/npm-debug.log.*
+
+# Webpack #
+webpack.records.json

@@ -1,0 +1,16 @@
+.collapsed {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all .2s ease-in-out;
+}
+
+.form {
+  &-valid {
+    box-shadow: 0 4px 8px $blue;
+  }
+
+  &-invalid {
+    box-shadow: 0 4px 8px $red;
+  }
+}

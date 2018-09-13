@@ -1,0 +1,93 @@
+
+@mixin transition($time) {
+    transition-property: all;
+    transition-duration: $time;
+    transition-timing-function: ease-in-out;
+}
+
+@mixin placeholder($color, $opacity, $font-size, $font-family) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: $opacity;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-transform: none;
+    }
+}
+
+@mixin text-elipsis($width) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin flex($flex-direction, $align-horizontal, $align-vertical) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $align-horizontal;
+    align-items: $align-vertical;
+}
+
+@mixin desktopFHD {
+    @media screen and (min-width: $desktopFHD) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin laptopsDPI {
+    @media screen and (min-width: $laptopsDPI) {
+        @content;
+    }
+}
+
+@mixin laptops {
+    @media screen and (min-width: $laptops) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (min-width: $phones) {
+        @content;
+    }
+}
+
+@mixin vertical {
+    @media screen and (min-width: $vertical) {
+        @content;
+    }
+}
