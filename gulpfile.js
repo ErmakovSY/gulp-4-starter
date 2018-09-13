@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const plumber = require('gulp-plumber');
 const del = require('del');
 
+const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const cheerio = require('gulp-cheerio');
 const concat = require('gulp-concat');
@@ -78,6 +79,10 @@ function sprites() {
 function templates() {
   return gulp.src(paths.html.src)
     .pipe(plumber())
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+    }))
     .pipe(plumber.stop())
     .pipe(gulp.dest(paths.html.dest));
 }
